@@ -1,0 +1,220 @@
+:root {
+  --transparent-white: rgba(255, 255, 255, 0.7);
+  --transparent-black: rgba(0, 0, 0, 0.7);
+}
+
+html, body {
+  font-family: 'Gelasio', serif;
+  font-size: 2vmax;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+h1 {
+  font-size: 4vmin;
+  line-height: 200%;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+h2 {
+  font-size: 5vmin;
+}
+
+a,
+a:hover {
+  color: var(--transparent-black);
+}
+
+header {
+  background-color: var(--transparent-black);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+header > h1 > a {
+  text-decoration: none;
+}
+
+header > h1 > a,
+header > h1:hover > a {
+  color: var(--transparent-white);
+}
+
+header > h1 > a::before {
+  content: "\002302\0020";
+}
+
+header > h1:hover > a::after {
+  content: " Home.";
+}
+
+content.container-fluid {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+section.full-screen,
+div.full-screen {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  min-height: 100vh;
+}
+
+section.with-image {
+  background-position: center;
+  background-size: cover;
+}
+
+/* Header placed as a first child of the image section. */
+section.with-image content:first-child {
+  background-color: var(--transparent-white);
+  border-radius: 0.15em;
+  color: var(--transparent-black);
+  max-width: 75%;
+  padding: 1em;
+}
+
+section#index-why {
+  background-image: url('./img/intro.jpg');
+}
+
+div#index-why-text {
+  grid-template-columns: repeat(5, 1fr);
+  align-items: flex-start;
+  justify-items: center; /*TODO*/
+}
+
+/* div#index-why-text input,
+div#index-why-text label {
+  float: left;
+  width: 100%;
+} */
+
+div#index-why-text input {
+  display: none;
+}
+
+div#index-why-text input[type=checkbox]:checked + label {
+  color: black;
+}
+
+div#index-why-text input[type=checkbox]:checked + label::before {
+  content: '\002611\0020';
+}
+
+div#index-why-text input[type=checkbox]:not(:checked) + label::before {
+  content: '\002610\0020';
+}
+
+section#canberra-why,
+li#canberra {
+  background-image: url('./img/canberra/city.jpg');
+}
+
+section#canberra-how {
+  background-image: url('./img/canberra/library.jpg');
+}
+
+section#canberra-what {
+  background-image: url('./img/canberra/arboretum.jpg');
+}
+
+section#edinburgh-why {
+  background-image: url('./img/edinburgh/arturs-seat.jpg');
+}
+
+section#edinburgh-how,
+li#edinburgh {
+  background-image: url('./img/edinburgh/calton-hill.jpg');
+}
+
+section#edinburgh-what {
+  background-image: url('./img/edinburgh/museum.jpg');
+}
+
+section#prague-why {
+  background-image: url('./img/prague/clock.jpg');
+}
+
+section#prague-how {
+  background-image: url('./img/prague/boat.jpg');
+}
+
+section#prague-what,
+li#prague {
+  background-image: url('./img/prague/city.jpg');
+}
+
+section.full-screen > ul,
+div.full-screen > ul,
+section.full-screen > ol,
+div.full-screen > ol {
+  max-width: 75%;
+}
+
+/* Styles to apply if there is at least one unchecked box - 'hides' all cities. */
+input[type=checkbox]:not(:checked) ~ ul li {
+  display: none;
+}
+
+/* To display the right city based on the parameter checked. */
+#architecture:checked ~ ul li#canberra,
+#architecture:checked ~ ul li#edinburgh,
+#architecture:checked ~ ul li#prague,
+#art:checked ~ ul li#canberra,
+#art:checked ~ ul li#edinburgh,
+#art:checked ~ ul li#prague,
+#books:checked ~ ul li#canberra,
+#books:checked ~ ul li#edinburgh,
+#books:checked ~ ul li#prague,
+#cafes:checked ~ ul li#canberra,
+#cafes:checked ~ ul li#edinburgh,
+#cafes:checked ~ ul li#prague,
+#food:checked ~ ul li#canberra,
+#food:checked ~ ul li#edinburgh,
+#food:checked ~ ul li#prague,
+#gardens:checked ~ ul li#canberra,
+#gardens:checked ~ ul li#edinburgh,
+#gardens:checked ~ ul li#prague,
+#heritage:checked ~ ul li#canberra,
+#heritage:checked ~ ul li#edinburgh,
+#heritage:checked ~ ul li#prague,
+#opera:checked ~ ul li#canberra,
+#opera:checked ~ ul li#edinburgh,
+#opera:checked ~ ul li#prague,
+#outdoors:checked ~ ul li#canberra,
+#outdoors:checked ~ ul li#edinburgh,
+#outdoors:checked ~ ul li#prague,
+#water:checked ~ ul li#canberra,
+#water:checked ~ ul li#edinburgh,
+#water:checked ~ ul li#prague
+{
+  display: block;
+}
+
+ul#city-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+}
+
+ul#city-list li {
+  background-position: center;
+  background-size: cover;
+}
+
+ul.check-list {
+  list-style: none;
+}
+
+ul.check-list li {
+  text-indent: -1.2em;
+  padding-left: 1em;
+}
+
+ul.check-list li::before {
+  content: '\002610\0020';
+}
