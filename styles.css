@@ -33,26 +33,13 @@ a:hover {
 
 header {
   background-color: var(--transparent-black);
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
 }
 
-header > h1 > a {
-  text-decoration: none;
-}
-
-header > h1 > a,
-header > h1:hover > a {
+header *, header *:hover {
   color: var(--transparent-white);
-}
-
-header > h1 > a::before {
-  content: "\002302\0020";
-}
-
-header > h1:hover > a::after {
-  content: " Home.";
 }
 
 .container-fluid {
