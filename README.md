@@ -1,6 +1,8 @@
 # Quo Vadis, Kit?
 * Latin version of "Where are you going, Kit?"
-* CS50 HTML + CSS + Bootstrap Website Assignment
+* HTML + CSS + Bootstrap Website Assignment
+* Harvard's CS50x unsubmitted assignment
+* Please do not claim as yours, as that is considered plagiarism
 
 ## Why?
 * To preview my favourite cities
