@@ -188,12 +188,12 @@ section.with-image div:first-child {
   display: none;
 }
 
-#index-why-text input[type=checkbox]:not(:checked) ~ .city#nothing {
+#index-why-text input[type=checkbox]:not(:checked) ~ #nothing {
   display: grid;
   grid-column-start: 2;
 }
 
-#index-why-text input[type=checkbox]:checked ~ .city#nothing {
+#index-why-text input[type=checkbox]:checked ~ #nothing {
   display: none;
 }
 
