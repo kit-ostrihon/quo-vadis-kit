@@ -128,7 +128,7 @@ section.with-image div:first-child {
   padding: 1em;
 }
 
-#index-why-text .city#nothing {
+#index-why-text #nothing {
   background-image: url('./img/intro.jpg');
   display: none;
 }
