@@ -223,5 +223,5 @@ ul.check-list li {
 }
 
 ul.check-list li::before {
-  content: '\002610\0020';
+  content: '\0025FB\0020';
 }
