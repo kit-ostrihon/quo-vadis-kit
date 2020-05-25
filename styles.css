@@ -99,11 +99,11 @@ section.with-image div:first-child {
 }
 
 #index-why-text input[type=checkbox]:checked + label::before {
-  content: '\002611\00A0';
+  content: '\002714\00A0';
 }
 
 #index-why-text input[type=checkbox]:not(:checked) + label::before {
-  content: '\0025FB\00A0';
+  content: '\00274C\00A0';
 }
 
 #index-why-text .city {
@@ -126,6 +126,11 @@ section.with-image div:first-child {
   color: #000;
   color: rgba(0, 0, 0, 0.7);
   padding: 1em;
+}
+
+#index-why-text .city#nothing {
+  background-image: url('./img/intro.jpg');
+  display: none;
 }
 
 #canberra-why,
@@ -183,6 +188,15 @@ section.with-image div:first-child {
   display: none;
 }
 
+#index-why-text input[type=checkbox]:not(:checked) ~ .city#nothing {
+  display: grid;
+  grid-column-start: 2;
+}
+
+#index-why-text input[type=checkbox]:checked ~ .city#nothing {
+  display: none;
+}
+
 /* To display the right city based on the parameter checked. */
 #architecture:checked ~ #canberra,
 #architecture:checked ~ #edinburgh,
@@ -225,5 +239,5 @@ ul.check-list li {
 }
 
 ul.check-list li::before {
-  content: '\0025FB\00A0';
+  content: "\002610\00A0";
 }
