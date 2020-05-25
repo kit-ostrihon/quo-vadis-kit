@@ -184,14 +184,14 @@ section.with-image div:first-child {
 }
 
 /* Nothing found card displayed all the time... */
-#index-why-text input[type=checkbox] ~ #nothing.city {
+#index-why-text input[type=checkbox] ~ #nothing {
   background-image: url('./img/intro.jpg');
   display: grid;
   grid-column-start: 2;
 }
 
 /* ...except when any of the checkboxes ticked. */
-#index-why-text input[type=checkbox]:checked ~ #nothing.city {
+#index-why-text input[type=checkbox]:checked ~ #nothing {
   display: none;
 }
 
